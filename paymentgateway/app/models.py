@@ -11,9 +11,9 @@ class Order(models.Model):
     status=CharField(
         _("Payment Status"),
         default=PaymentStatus.PENDING,
-        max_length=254
+        max_length=254,
         blank=False,
-        bull=False,
+        null=False,
     )
     provider_order_id=models.CharField(
         _("Order ID"),max_length=40,null=False,blank=False
